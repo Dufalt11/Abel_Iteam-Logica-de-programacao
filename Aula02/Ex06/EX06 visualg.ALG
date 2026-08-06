@@ -21,11 +21,14 @@ Inicio
 
    escreval("digte o valor que quer sacar: ")
    leia(saque)
+   //calculo para verificar se o saque é possivel
    tira_saque <- saldo - saque
 
    se tira_saque >= 0 entao
-      escreval(nome, "Saque efetuado com sucesso", "\no seu saldo atual é de", tira_saque)
+      escreval(nome, ", Saque efetuado com sucesso")
+      escreval("Seu saldo atual é de", tira_saque)
    senao
-      escreval(nome, "Saque indisponivel", "\nSaque maior que o saldo")
+      escreval(nome, ", Saque indisponivel")
+      escreval("Saque maior que o saldo")
    fimse
 Fimalgoritmo

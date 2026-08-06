@@ -11,8 +11,8 @@ nome: caractere
 
 Inicio
 // Seção de Comandos, procedimento, funções, operadores, etc... 
-escreva("digite seu nome: ")
+escreval("digite seu nome: ")
 leia(nome)
-escreva("ola", nome)
+escreval("Olá, ", nome, "! Bem-vindo ao Iteam")
 
 Fimalgoritmo
