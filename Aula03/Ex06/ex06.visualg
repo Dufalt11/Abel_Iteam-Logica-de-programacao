@@ -1,0 +1,15 @@
+algoritmo "ex06"
+
+var
+ 
+  gasosa : real // Combustivel
+  distancia : real
+  consumo : real //  distancia / litros
+inicio
+  distancia <- 100
+  gasosa <- 10
+  consumo <- distancia / gasosa
+  escreval("voce percorreu ", distancia, "Km com ", gasosa, "L")
+  escreval("Seu consumo foi de ", consumo)
+
+fimalgoritmo
