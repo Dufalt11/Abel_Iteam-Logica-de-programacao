@@ -3,10 +3,10 @@ Algoritmo "Ex05"
 // Autor(a)    : Abel Benicio
 Var
    // Seção de Declarações das variáveis
-   saque  : real
-   saldo : real
-   tira_saque : real
+   // número
+   num : real
    nome : caractere
+   impar_par : real
 
 
 Inicio
@@ -14,18 +14,18 @@ Inicio
    escreval("Digite seu nome: ")
    leia(nome)
 
-   escreval("Ola,", nome, "bem vindo ao banco: ")
-
-   escreval("digite seu saldo: ")
-   leia(saldo)
-
-   escreval("digte o valor que quer sacar: ")
-   leia(saque)
-   tira_saque <- saldo - saque
-
-   se tira_saque >= 0 entao
-      escreval(nome, "Saque efetuado com sucesso", "\no seu saldo atual é de", saldo)
+   escreval("Ola, ", nome)
+   //vai ler um numero
+   escreval("Digite um número: ")
+   leia(num)
+   // vai fazer a divisão e verificar se é i ou p
+   impar_par <- (num%2)
+   // codicional para verificar
+   se impar_par = 0 entao
+   escreval(num, " é par")
    senao
-      escreval(nome, "Saque indisponivel", "\nSaque maior que o saldo")
+   escreval(num, " é ímpar")
    fimse
+   
+
 Fimalgoritmo

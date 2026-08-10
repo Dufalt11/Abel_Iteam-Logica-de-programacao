@@ -7,24 +7,24 @@ Algoritmo "EX03"
 Var
   // Seção de Declarações das variáveis
   // base do triangulo
-  base : inteiro
+  base : real
   // altura do triangulo
-  altura : inteiro
+  altura : real
   // area
-  area : inteiro
+  area : real
 Inicio
   // Seção de Comandos
   //lendo a base 
-  escreval("Digite a base triângulo: ")
+  escreval("Digite a base triangulo: ")
   leia(base)
   //lendo a altura 
-  escreval("Digite a altura do triângulo: ")
+  escreval("Digite a altura do triangulo: ")
   leia(altura)
 
   // media aritimetica dos dois numeros
   area <- (base * altura)/2
 
-  escreval("A área do triângulo é ", area)
+  escreval("A �rea do trianngulo � ", area)
 
 
 
