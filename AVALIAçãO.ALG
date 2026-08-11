@@ -1,5 +1,5 @@
-Algoritmo "Avaliação"
-// Disciplina   : [Linguagem e Lógica de Programação]
+algoritmo "Avaliaï¿½ï¿½o"
+// Disciplina   : [Linguagem e Lï¿½gica de Programaï¿½ï¿½o]
 // Professor   : Helida Batista
 
 // Aluno(a): ABEL BENICIO___________________________________________
@@ -24,11 +24,10 @@ var
    i : inteiro
    horaExtra : vetor[0..4] de inteiro
    produtividade : vetor[0..4] de caractere
-   conta_hrextra : inteiro   // conta da hora extra
    somaHoras : inteiro
    media : real
 
-Inicio
+inicio
 
    // Dados de entrada
    // Cada funcionario ocupa a MESMA posicao nos dois vetores.
@@ -61,10 +60,21 @@ Inicio
    // ate 4 (sao 5 funcionarios). Dentro desse laco, usando a
    // variavel i como posicao atual, faca as quatro coisas
    // abaixo, em ordem, para CADA funcionario:
+
+   // Parte 2a (feita)
+   // Calcule quantas horas extras esse funcionario fez. A
+   // conta e horas[i] menos 8 (a jornada de trabalho). Se
+   // der um numero negativo (a pessoa trabalhou menos que
+   // a jornada), considere que a hora extra foi 0, porque
+   // nao existe hora extra negativa. Guarde o resultado na
+   // variavel horaExtra.
    escreval("---------Relatorio Inicial---------")
    para i de 0 ate 4 faca
       escreval(nomes[i], " Trabalhou", horas[i], " horas")
       horaExtra[i] <- horas[i] - 8 // horas extras armazenadas dentro do vetor
+      se horaExtra[i] < 0 entao
+         horaExtra[i] <- 0 // se for negativo, hora extra vira 0
+      fimse
    fimpara
    escreval("-----------------------------------")
    escreval("")
@@ -103,48 +113,37 @@ Inicio
    escreval("")
 
    //Relatorio de soma de horas envolvendo todos os trabalhadores
-
-   para i de 0 ate 4 faca
-      somaHoras <- somaHoras + horas[i]
-   fimpara
-
-
-   escreval("---------Relatorio Final---------")
-   escreval("")
-   para i de 0 ate 4 faca
-      escreval(nomes[i], " - ", horas[i], " Horas trabalhadas", " - ", horaExtra[i], " - ", produtividade[i])
-   fimpara
-   // Parte 2a (feita)
-   // Calcule quantas horas extras esse funcionario fez. A
-   // conta e horas[i] menos 8 (a jornada de trabalho). Se
-   // der um numero negativo (a pessoa trabalhou menos que
-   // a jornada), considere que a hora extra foi 0, porque
-   // nao existe hora extra negativa. Guarde o resultado na
-   // variavel horaExtra.
-
-
-
    // Parte 2c  (feito)
    // Some horas[i] na variavel somaHoras. E assim que a
    // soma total da equipe vai sendo montada, funcionario
    // por funcionario, a cada volta do laco.
+   para i de 0 ate 4 faca
+      somaHoras <- somaHoras + horas[i]
+   fimpara
 
-   // Parte 2d
+   // Parte 2d (feito)
    // Exiba uma linha de relatorio para esse funcionario,
    // juntando o nome, as horas trabalhadas, a hora extra e
    // a produtividade que voce calculou acima. Por exemplo:
    // Ana - 9h trabalhadas - 1h extra - Acima do esperado
+   escreval("---------Relatorio Final---------")
+   escreval("")
+   para i de 0 ate 4 faca
+      escreval(nomes[i], " - ", horas[i], " Horas trabalhadas", " - ", horaExtra[i], " horas extras", " - ", produtividade[i])
+   fimpara
 
-
-   // Parte 3
+   // Parte 3 (feito)
    // Depois que o laco terminar de passar por todos os
    // funcionarios, calcule a media de horas da equipe. A conta
    // e somaHoras dividido por 5.
-
-
+   escreval("-----------------------------------")
    escreval("")
-   escreval("Resumo da equipe")
-   // Parte 4
+   media <- somaHoras / 5
+   escreval("---------MÃ©dia da equipe---------")
+   escreval("MÃ©dia de horas da equipe: ", media)
+   escreval("-----------------------------------")
+
+   // Parte 4 (feita)
    // Exiba a media de horas da equipe que voce calculou na
    // Parte 3.
 
